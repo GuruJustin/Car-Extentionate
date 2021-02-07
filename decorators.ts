@@ -9,6 +9,7 @@ abstract class Car {
 }
 
 
+
 class Models extends Car{ 
     public description = "Model S"
 
@@ -16,6 +17,8 @@ class Models extends Car{
         return 623
     }
 }
+
+
 
 class Modelx extends Car{
     public description = "Model X"
@@ -34,7 +37,6 @@ abstract class CarOptions extends Car {
 
 
 class EnhancedAutoPilot extends CarOptions {
-    decoratedCar : Car;
 
     constructor (car : Car) {
         super()
@@ -52,7 +54,6 @@ class EnhancedAutoPilot extends CarOptions {
 
 
 class RearFacingSeats extends CarOptions {
-    decoratedCar : Car;
 
     constructor (car : Car) {
         super()
