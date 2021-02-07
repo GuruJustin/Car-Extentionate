@@ -36,9 +36,9 @@ class WeatherStation implements Subject{
 
 class TemperatureDisplay implements Observer{
 
-    private subject : Subject;
+    private subject : WeatherStation;
 
-    constructor(weatherStation : Subject) {
+    constructor(weatherStation : WeatherStation) {
         this.subject = weatherStation
         weatherStation.registerObserver(this)
     }
@@ -50,9 +50,9 @@ class TemperatureDisplay implements Observer{
 }
 
 class Fan implements Observer{
-    private subject : Subject;
+    private subject : WeatherStation;
 
-    constructor(weatherStation : Subject) {
+    constructor(weatherStation : WeatherStation) {
         this.subject = weatherStation
         weatherStation.registerObserver(this)
     }
